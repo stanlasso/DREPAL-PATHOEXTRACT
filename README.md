@@ -31,5 +31,5 @@ DREPAL-PATHOEXTRACT was built with SnakeMake in Python  ...
 - Egomli Stanislas ASSOHOUN 
 - Aristide Berenger AKO 
 - Catherine DOGUA 
-- Christian-Renaud SERY
+- Christian Paul AKO
 - Ronan JAMBOU 
