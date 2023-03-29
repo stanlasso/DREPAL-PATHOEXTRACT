@@ -1,0 +1,12 @@
+file                                                |format|type|num_seqs|sum_len |min_len|avg_len|max_len
+:---------------------------------------------------|:-----|:---|:-------|:-------|:------|:------|:------
+uploads/data/ERR4082713_1.fastq.gz                  |FASTQ |DNA |177070  |44241175|56     |249.9  |251
+uploads/data/ERR4082713_2.fastq.gz                  |FASTQ |DNA |177070  |44238050|55     |249.8  |251
+uploads/res/dbsub/ERR4082713_Host_mapped_R1.fastq   |FASTQ |DNA |3002    |705482  |127    |235.0  |236
+uploads/res/dbsub/ERR4082713_Host_mapped_R2.fastq   |FASTQ |DNA |3002    |705207  |128    |234.9  |236
+uploads/res/dbsub/ERR4082713_Host_unmapped_R1.fastq |FASTQ |DNA |173954  |40815920|30     |234.6  |236
+uploads/res/dbsub/ERR4082713_Host_unmapped_R2.fastq |FASTQ |DNA |173954  |40770173|30     |234.4  |236
+uploads/res/dbsub/ERR4082713_Patho_mapped_R1.fastq  |FASTQ |DNA |173932  |40811410|32     |234.6  |236
+uploads/res/dbsub/ERR4082713_Patho_mapped_R2.fastq  |FASTQ |DNA |173932  |40768809|30     |234.4  |236
+uploads/res/dbsub/ERR4082713_Patho_unmapped_R1.fastq|      |    |0       |0       |0      |0.0    |0
+uploads/res/dbsub/ERR4082713_Patho_unmapped_R2.fastq|      |    |0       |0       |0      |0.0    |0

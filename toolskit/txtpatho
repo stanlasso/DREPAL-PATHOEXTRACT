@@ -1,0 +1,42 @@
+Load Samples
+
+Ce module nous permets de charger, supprimer et enfin verifier la qualité des echantillons dans notre espace de travail.
+En effet, les séquenceurs modernes à haut débit peuvent générer des dizaines de millions de séquences dans un
+seul passage. Apres le chargement des echantillons, PathoExtract permet d'effectuez toujours quelques contrôles de qualité simples pour vous assurer que les données brutes sont bonnes avant d'analyser les séquences pour en tirer des conclusions biologiques.
+
+
+Quality Control 
+
+Le contrôle qualité et le prétraitement des fichiers FASTQ sont essentiels pour fournir des données propres pour l'analyse en aval.
+Quality Control dans PathoExtract permet plsuieurs opérations, comme le contrôle de la qualité, l'ajustement de l'adaptateur et le filtrage de la qualité.
+
+Double substract 
+
+La partie la plus importante de pathoExtract est la double soustraction digital.
+En effet, la double soustraction digital utilise est un ensemble d'utilitaires pour interagir avec et post-traiter les alignements de lecture de séquences d'ADN courtes dans les formats SAM (Sequence Alignment/Map), BAM (Binary Alignment/Map) et CRAM. Ces fichiers sont générés en sortie par des aligneurs à lecture courte comme BWA. La double soustraction digital prend en charge des tâches complexes telles que la visualisation d'alignement ainsi que le tri, l'indexation, l'extraction de données et la conversion de format.
+
+Pipeline 
+
+
+
+............................................................................................
+PathoExtract. What knows ?
+
+PathoExtract was developed to help biologists, even if they have little or no expertise in bioinformatics, to perform the main steps of NGS data preprocessing (in the form of raw paired end FASTQ files)
+Load Samples. the beginning of pathoExtract.
+
+This module allows us to load, delete and finally check the quality of the samples in our workspace. Indeed, modern high-throughput sequencers can generate tens of millions of sequences in a single run. After loading the samples, PathoExtract always allows you to perform some simple quality checks to ensure that the raw data is good before analyzing the sequences to draw biological conclusions.
+Quality Control. The second stage.
+
+Quality control and preprocessing of FASTQ files is essential to provide clean data for downstream analysis. Quality Control in PathoExtract allows several operations, such as quality control, adapter adjustment and quality filtering.
+Digital double subtraction. the last module of PathoExtract
+
+The most important part of pathoExtract is the digital double subtraction. Indeed, the digital double subtraction uses is a set of utilities to interact with and post-process read alignments of short DNA sequences in SAM (Sequence Alignment/Map), BAM (Binary Alignment/Map) and CRAM. These files are output by short read aligners like BWA. Digital double subtraction supports complex tasks such as alignment visualization as well as sorting, indexing, data extraction and format conversion.
+Re-Run Double Digital Substruct. add-on module.
+
+Performs the same tasks as digital double subtraction but in a different working folder.
+PipeLine. the automaton.
+
+pathoExtract's pipeline runs all quality control and digital double subtraction jobs without user intervention until all resulting files are output.
+
+

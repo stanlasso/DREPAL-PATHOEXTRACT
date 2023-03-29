@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "username": "stanlasso@gmail.com",
+        "password": "12345",
+        "fullname": "stan"
+    },
+    {
+        "id": 2,
+        "username": "christianpaulako@gmail.com",
+        "password": "ako223",
+        "fullname": "chris"
+    },
+    {
+        "fullname": "christian",
+        "username": "ralphymarley@live.fr",
+        "password": "123456",
+        "profil": "bio-info",
+        "id": 1635121154577
+    },
+    {
+        "fullname": "Assohoun stanislas",
+        "username": "stanlasso@gmail",
+        "password": "moya2012",
+        "profil": "bio",
+        "id": 1636298470539
+    },
+    {
+        "fullname": "Soro",
+        "username": "soro83yardj@gmail.com",
+        "password": "123456",
+        "profil": "info",
+        "id": 1636743298534
+    },
+    {
+        "fullname": "Francis",
+        "username": "francis.ehoussou@cisci.com",
+        "password": "sysconf@1234",
+        "profil": "info",
+        "id": 1636820057199
+    }
+]

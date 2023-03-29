@@ -1,0 +1,19 @@
+samples : 
+    sample_1 : CV678_S116_R
+extensions : 
+    extension_1 : fastq.gz
+references:
+    human: human.fasta
+    parasite: Wuhan-Hu-1.fasta
+    quality: 
+parameter:
+    trim_front1 : --clip_R1 10
+    trim_front2 : --clip_R2 10
+    trim_tail1 : 
+    trim_tail2 : 
+    n_base_limit : --max_n 20
+    max_lg : --length 20
+    max_ql : -q 20
+ENVS:
+    SNK_ENV : source activate snakemake
+    home : /home/christian/projet/patho_v2/toolskit

@@ -1,0 +1,25 @@
+
+PE forward file: /home/bioinfo/toolskit_backend/uploads/res/qc/trimed_CV656_S92_R1.fastq
+PE reverse file: /home/bioinfo/toolskit_backend/uploads/res/qc/trimed_CV656_S92_R2.fastq
+
+Total input FastQ records: 2604900 (1302450 pairs)
+
+FastQ paired records kept: 2436126 (1218063 pairs)
+FastQ single records kept: 77433 (from PE1: 38593, from PE2: 38840)
+FastQ paired records discarded: 13908 (6954 pairs)
+FastQ single records discarded: 77433 (from PE1: 38840, from PE2: 38593)
+
+
+PE forward file: /home/bioinfo/toolskit_backend/uploads/res/qc/trimed_CV584_S20_R1.fastq
+PE reverse file: /home/bioinfo/toolskit_backend/uploads/res/qc/trimed_CV584_S20_R2.fastq
+
+Total input FastQ records: 2604900 (1302450 pairs)
+
+FastQ paired records kept: 2436126 (1218063 pairs)
+FastQ single records kept: 77433 (from PE1: 38593, from PE2: 38840)
+FastQ paired records discarded: 13908 (6954 pairs)
+FastQ single records discarded: 77433 (from PE1: 38840, from PE2: 38593)
+
+['CV584_S20_R', 'CV656_S92_R']
+['fastq.gz']
+/home/bioinfo/toolskit_backend/uploads/data
