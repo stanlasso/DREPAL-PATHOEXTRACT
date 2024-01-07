@@ -1,0 +1,129 @@
+<div class="container marketing">
+
+
+
+    <!-- START THE FEATURETTES -->
+    <div class="row featurette">
+        <div>
+            <h2 class="featurette-heading fw-normal lh-1">PathoExtract. <span class="text-muted">What knows ?</span>
+            </h2>
+            <p class="lead">PathoExtract was developed to help biologists, even if they have little or no expertise in
+                bioinformatics, to perform the main steps of NGS data preprocessing (in the form of raw paired end FASTQ
+                files)</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Load Samples. <span class="text-muted">the beginning of
+                    pathoExtract.</span></h2>
+            <p class="lead">This module allows us to load, delete and finally check the quality of the samples in our
+                workspace.
+                Indeed, modern high-throughput sequencers can generate tens of millions of sequences in a
+                single run. After loading the samples, PathoExtract always allows you to perform some simple quality
+                checks to ensure that the raw data is good before analyzing the sequences to draw biological
+                conclusions.</p>
+            <a routerLink="/reads" class="waves-effect waves-dark">
+                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                <span class="pcoded-mtext">Load Samples</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </div>
+        <div class="col-md-5">
+
+        </div>
+    </div>
+
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Quality Control. <span class="text-muted">The second
+                    stage.</span></h2>
+            <p class="lead">Quality control and preprocessing of FASTQ files is essential to provide clean data for
+                downstream analysis.
+                Quality Control in PathoExtract allows several operations, such as quality control, adapter adjustment
+                and quality filtering.</p>
+            <a routerLink="/qc" class="waves-effect waves-dark">
+                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                <span class="pcoded-mtext">Quality Control</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </div>
+        <div class="col-md-5">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Digital double subtraction. <span class="text-muted">the last
+                    module of PathoExtract
+
+                </span></h2>
+            <p class="lead">The most important part of pathoExtract is the digital double subtraction.
+                Indeed, the digital double subtraction uses is a set of utilities to interact with and post-process read
+                alignments of short DNA sequences in SAM (Sequence Alignment/Map), BAM (Binary Alignment/Map) and CRAM.
+                These files are output by short read aligners like BWA. Digital double subtraction supports complex
+                tasks such as alignment visualization as well as sorting, indexing, data extraction and format
+                conversion.</p>
+            <a routerLink="/db" class="waves-effect waves-dark">
+                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                <span class="pcoded-mtext">Double Digital Sub</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </div>
+        <div class="col-md-5 order-md-1">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Re-Run Double Digital Substruct. <span
+                    class="text-muted">add-on module.</span></h2>
+            <p class="lead">Performs the same tasks as digital double subtraction but in a different working folder.</p>
+            <a routerLink="/redb" class="waves-effect waves-dark">
+                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                <span class="pcoded-mtext">Re-run Double Digital Sub</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+
+        </div>
+        <div class="col-md-5">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">PipeLine. <span class="text-muted">the automaton.</span>
+            </h2>
+            <p class="lead">
+                pathoExtract's pipeline runs all quality control and digital double subtraction jobs without user
+                intervention until all resulting files are output.</p>
+            <a routerLink="/pipeline" class="waves-effect waves-dark">
+                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                <span class="pcoded-mtext">Pipe Line</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </div>
+        <div class="col-md-5 order-md-1">
+
+        </div>
+    </div><!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->

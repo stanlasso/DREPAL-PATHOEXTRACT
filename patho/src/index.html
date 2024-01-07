@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PathoE</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--  <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ -->
+
+    <link href="./assets/main.css" rel="stylesheet">
+
+    <meta name="keywords"
+        content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="Codedthemes" />
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <!--     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome-n.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <!--  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses'],
+                ['2004', 4000, 400],
+                ['2005', 1170, 460],
+                ['2006', 660, 1120],
+                ['2007', 1030, 540]
+            ]);
+
+            var options = {
+                title: 'Company Performance',
+                curveType: 'function',
+                legend: {
+                    position: 'bottom'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .block {
+            width: 150px;
+            height: 100px;
+            background-color: #3498db;
+            margin-right: 0.3cm;
+            margin-bottom: 0.3cm;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                color: #000;
+            }
+
+            &:hover::after {
+                content: attr(data-description);
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                padding: 5px;
+                border-radius: 5px;
+                white-space: nowrap;
+                display: none;
+            }
+
+            &:hover::before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                border: solid transparent;
+                border-width: 8px;
+                margin-left: -8px;
+                border-top-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+    </style>
+</head>
+
+<body class="mat-typography">
+    <app-root></app-root>
+    <script type="text/javascript" src="./assets/js/jquery/jquery.min.js "></script>
+    <script type="text/javascript" src="./assets/js/jquery-ui/jquery-ui.min.js "></script>
+    <script type="text/javascript" src="./assets/js/popper.js/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap/js/bootstrap.min.js "></script>
+    <script src="./assets/pages/waves/js/waves.min.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="./assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+    <script src="./assets/js/pcoded.min.js"></script>
+    <script src="./assets/js/vertical/vertical-layout.min.js "></script>
+    <script type="text/javascript" src="./assets/js/script.js "></script>
+
+
+
+
+  <script src="./assets/added/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="./assets/added/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/added/vendor/echarts/echarts.min.js"></script>
+  <script src="./assets/added/vendor/quill/quill.min.js"></script>
+  <script src="./assets/added/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="./assets/added/vendor/tinymce/tinymce.min.js"></script>
+  <script src="./assets/added/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="./assets/added/js/main.js"></script>
+    <!--  <script src="./assets/chart.js/dist/chart.min.js"></script>
+    <script src="./assets/angular-chart.js/dist/angular-chart.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+    <script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>-->
+
+</body>
+
+
+
+
+</html>

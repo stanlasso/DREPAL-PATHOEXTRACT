@@ -1,0 +1,5 @@
+nvm install 11  
+nvm install 12
+nvm alias default 12  
+nvm use 11  
+npm install @angular/cli -g

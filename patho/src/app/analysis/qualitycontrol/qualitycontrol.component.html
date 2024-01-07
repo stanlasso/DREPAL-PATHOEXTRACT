@@ -1,0 +1,186 @@
+<div class="app-main__inner">
+
+
+    <div class="tab-content">
+        <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+            <div class="row">
+                <div class="container bg-dark text-white">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                                Quality Control
+                            </h3>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div>
+                    <hr>
+                </div>
+                <div class="col-md-4">
+
+                    <div class="main-card mb-3 card">
+                        <div class="card-body">
+                            <h5 class="card-title">Manage Parameter</h5>
+                            <form [formGroup]="ParameterFormControl">
+                                <div class="row">
+                                    <div class="col">
+                                        <mat-form-field id="list_p" appearance="fill">
+                                            <mat-label>Select Parameter</mat-label>
+                                            <mat-select formControlName="fullname"
+                                                (selectionChange)="onChangeParameter()" required>
+                                                <mat-option>--</mat-option>
+                                                <mat-option value="new">Add Parameter</mat-option>
+                                                <mat-option *ngFor="let parameter of ParameterList" [value]="parameter">
+                                                    {{parameter}}
+                                                </mat-option>
+                                            </mat-select>
+                                            <mat-error *ngIf="ParameterFormControl.hasError('required')">Please choose
+                                                Parameter
+                                            </mat-error>
+                                            <mat-hint></mat-hint>
+                                        </mat-form-field>
+                                        <div *ngIf="this.newParam">
+                                            <p>
+                                                <mat-form-field appearance="outline" class="champ_p">
+                                                    <mat-label>Parameter</mat-label>
+                                                    <input matInput type="text" formControlName="fullname"
+                                                        placeholder="Placeholder" required>
+                                                </mat-form-field>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            <mat-form-field appearance="outline" class="champ_p">
+                                                <mat-label>trim_front1</mat-label>
+                                                <input matInput type="number" formControlName="trim_front1"
+                                                    placeholder="Placeholder" required>
+                                            </mat-form-field>
+                                        </p>
+                                        <p>
+                                            <mat-form-field appearance="outline" class="champ_p">
+                                                <mat-label>trim_front2</mat-label>
+                                                <input matInput type="number" formControlName="trim_front2"
+                                                    placeholder="Placeholder" required>
+                                            </mat-form-field>
+                                        </p>
+                                        <p>
+                                            <mat-form-field appearance="outline" class="champ_p">
+                                                <mat-label>trim_tail1</mat-label>
+                                                <input matInput type="number" formControlName="trim_tail1"
+                                                    placeholder="Placeholder" required>
+                                            </mat-form-field>
+                                        </p>
+                                        <p>
+                                            <mat-form-field appearance="outline" class="champ_p">
+                                                <mat-label>trim_tail2</mat-label>
+                                                <input matInput type="number" formControlName="trim_tail2"
+                                                    placeholder="Placeholder" required>
+                                            </mat-form-field>
+                                        </p>
+                                        <p>
+                                            <mat-form-field appearance="outline" class="champ_p">
+                                                <mat-label>n base limit</mat-label>
+                                                <input matInput type="number" formControlName="n_base_limit"
+                                                    placeholder="Placeholder" required>
+                                            </mat-form-field>
+                                        </p>
+                                        <p>
+                                            <mat-form-field appearance="outline" class="champ_p">
+                                                <mat-label>min quality</mat-label>
+                                                <input matInput type="number" formControlName="max_ql"
+                                                    placeholder="Placeholder" required>
+                                            </mat-form-field>
+                                        </p>
+                                        <p>
+                                            <mat-form-field appearance="outline" class="champ_p">
+                                                <mat-label>min length</mat-label>
+                                                <input matInput type="number" formControlName="max_lg"
+                                                    placeholder="Placeholder" required>
+                                                <input type="hidden" formControlName="type" placeholder="Placeholder"
+                                                    value="qc" required>
+                                            </mat-form-field>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <section>
+                                    <div class="example-button-row">
+                                        <button mat-button *ngIf="this.newParam" (click)="add()">add</button>
+                                        <button mat-button color="primary" *ngIf="!this.newParam"
+                                            (click)="update()">update</button>
+                                        <button mat-button color="accent" *ngIf="!this.newParam"
+                                            (click)="delete()">delete</button>
+                                    </div>
+                                </section>
+                            </form>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-8">
+                    <div class="main-card mb-3 card">
+                        <div class="card-body">
+                            <h5 class="card-title">Run Quality Control</h5>
+                            <form [formGroup]="QcFormControl" (ngSubmit)="onSubmit()">
+                                <!-- <div>
+                                    <mat-form-field appearance="fill" id="data">
+                                        <mat-label>Reads Files</mat-label>
+                                        <mat-select formControlName="data" multiple>
+                                            <mat-option *ngFor="let data of dataList" [value]="data">{{data}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div> -->
+                                <div>
+                                    <mat-form-field appearance="fill" id="parameter">
+                                        <mat-label>Select Parameter</mat-label>
+                                        <mat-select formControlName="parameter" required>
+                                            <mat-option>--</mat-option>
+                                            <mat-option *ngFor="let parameter of ParameterList" [value]="parameter">
+                                                {{parameter}}
+                                            </mat-option>
+                                        </mat-select>
+                                        <mat-error *ngIf="QcFormControl.hasError('required')">Please choose Parameter
+                                        </mat-error>
+                                        <mat-hint></mat-hint>
+                                    </mat-form-field>
+                                </div>
+                                <button class="button" [disabled]='showlog' type="submit">Run</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" *ngIf="!showlog; else elseBlock">
+                            <button mat-raised-button (click)="link()" [disabled]="showlog"> Results
+                            </button> &nbsp;
+                            <button mat-raised-button [disabled]="showlog">
+                                <a target="_blank" (click)="linkdwn()" href="{{this.baseUrl}}/getconsole/">Download Log
+                                </a>
+                            </button>
+                            &nbsp;
+                            <button mat-raised-button [disabled] [ngStyle]="{'background-color':color}">
+                                Status
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <ng-template #elseBlock>
+                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                    </ng-template>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

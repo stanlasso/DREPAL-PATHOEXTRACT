@@ -1,0 +1,579 @@
+<!-- Login space  -->
+<div *ngIf="this.isSignin">
+
+    <section class="login-block">
+        <!-- Container-fluid starts -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Authentication card start -->
+                 
+                    <form [formGroup]="userLogin" class="md-float-material form-material">
+                        <!-- <div class="text-center">
+                            <img src="assets/images/logo.png" alt="logo.png">
+                        </div> -->
+                        <div class="auth-box card">
+                            <div class="card-block">
+                                <div class="row m-b-20">
+                                    <div class="col-md-12">
+                                        <h3 class="text-center">Sign In</h3>
+                                    </div>
+                                </div>
+                                <div class="form-group form-primary">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Email</mat-label>
+                                        <input matInput type="email" formControlName="email" placeholder="Placeholder"
+                                            required>
+                                    </mat-form-field>
+                                </div>
+                                <div class="form-group form-primary">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Password</mat-label>
+                                        <input matInput type="password" formControlName="password"
+                                            placeholder="Placeholder" required>
+                                    </mat-form-field>
+                                </div>
+
+                                <div>
+                                    {{message}}
+                                </div>
+
+
+                                <div class="row m-t-25 text-left">
+                                    <div class="col-12">
+                                        <div class="checkbox-fade fade-in-primary d-">
+                                            <label>
+                                                <input type="checkbox" value="">
+                                                <span class="cr"><i
+                                                        class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
+                                                <span class="text-inverse">Remember me</span>
+                                            </label>
+                                        </div>
+                                        <div class="forgot-phone text-right f-right">
+                                            <a href="#" (click)="forget()" class="text-right f-w-600"> Forgot
+                                                Password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <button type="button"
+                                            class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20"
+                                            (click)="login()">Sign in</button>
+                                    </div>
+
+                                </div>
+                                <hr />
+                                <div class="row">
+
+                                    <div class="col-md-10">
+                                        <p class="text-inverse text-left m-b-0">Thank you.</p>
+                                        <div class="text-center mt-4 font-weight-light">
+                                            Don't have an account? <a class="text-primary" href="#"
+                                                (click)="signUp()">Create</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="assets/images/logo_connect.png" alt="small-logo.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- end of form -->
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+
+</div>
+<!-- PassWord forgot  -->
+<div *ngIf="this.isForgot">
+    <!-- Pre-loader end -->
+    <section class="login-block">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form [formGroup]="userSignup" class="md-float-material form-material">
+                        <!--  <div class="text-center">
+                            <img src="assets/images/logo.png" alt="logo.png">
+                        </div> -->
+                        <div class="auth-box card">
+                            <div class="card-block">
+                                <div class="row m-b-20">
+                                    <div class="col-md-12">
+                                        <h3 class="text-center txt-primary">Recover your password</h3>
+                                    </div>
+                                </div>
+                                <div class="form-group form-primary">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Email</mat-label>
+                                        <input matInput type="email" formControlName="email" placeholder="Email"
+                                            required>
+                                    </mat-form-field>
+
+                                </div>
+                                <div>
+                                    {{message}}
+                                </div>
+
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <button type="button"
+                                            class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Send</button>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-inverse text-left m-b-0">Thank you.</p>
+                                        <div class="text-center mt-4 font-weight-light">
+                                            have an account? <a class="text-primary" href="#"
+                                                (click)="signIn()">Login</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="assets/images/logo_connect.png" alt="small-logo.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+</div>
+<!-- Sign Up space --------------------------------------------------------------------------------------- -->
+<div *ngIf="this.isSignup">
+
+    <!-- Pre-loader end -->
+    <section class="login-block">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form [formGroup]="userSignup" class="md-float-material form-material">
+                        <!--  <div class="text-center">
+                            <img src="assets/images/logo.png" alt="logo.png">
+                        </div> -->
+                        <div class="auth-box card">
+                            <div class="card-block">
+                                <div class="row m-b-20">
+                                    <div class="col-md-12">
+                                        <h3 class="text-center txt-primary">Sign up</h3>
+                                    </div>
+                                </div>
+                                <div class="form-group form-primary">
+
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Fullname</mat-label>
+                                        <input matInput type="text" formControlName="fullname" placeholder="Fullname"
+                                            required>
+                                    </mat-form-field>
+
+                                </div>
+                                <div class="form-group form-primary">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Email</mat-label>
+                                        <input matInput type="email" formControlName="email" placeholder="Email"
+                                            required>
+                                    </mat-form-field>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-primary">
+                                            <mat-form-field appearance="outline">
+                                                <mat-label>Password</mat-label>
+                                                <input matInput type="password" formControlName="password"
+                                                    placeholder="Password" required>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-primary">
+                                            <mat-form-field appearance="outline">
+                                                <mat-label>Retype Your Password</mat-label>
+                                                <input matInput type="password" formControlName="vpassword"
+                                                    placeholder="Password" required>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-primary">
+
+                                    <mat-form-field id="list_p" appearance="fill">
+                                        <mat-label>Select Profil</mat-label>
+                                        <mat-select formControlName="profil" required>
+                                            <mat-option>--</mat-option>
+                                            <mat-option value="bio-info">Bio Computer Scientist</mat-option>
+                                            <mat-option value="bio">Biologist</mat-option>
+                                            <mat-option value="info">Programmer</mat-option>
+                                        </mat-select>
+                                        <mat-error *ngIf="userSignup.hasError('required')">Please choose Profil
+                                        </mat-error>
+                                        <mat-hint></mat-hint>
+                                    </mat-form-field>
+
+
+                                </div>
+                                <div>
+                                    {{message}}
+                                </div>
+
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <button (click)="signUp()" type="button"
+                                            class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Sign
+                                            up now</button>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-inverse text-left m-b-0">Thank you.</p>
+                                        <div class="text-center mt-4 font-weight-light">
+                                            have an account? <a class="text-primary" href="#"
+                                                (click)="signIn()">Login</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+</div>
+
+<!-- home ------------------------------------------------------------------------------------------------- -->
+<div *ngIf="this.isHome">
+    <div class="theme-loader">
+        <div class="loader-track">
+            <div class="preloader-wrapper">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+                    <div class="navbar-logo">
+                        <a class="mobile-menu waves-effect waves-light" id="mobile-collapse">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <div class="mobile-search waves-effect waves-light">
+                            <div class="header-search">
+                                <div class="main-search morphsearch-search">
+                                    <div class="input-group">
+                                        <span class="input-group-prepend search-close"><i
+                                                class="ti-close input-group-text"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Keyword">
+                                        <span class="input-group-append search-btn"><i
+                                                class="ti-search input-group-text"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a routerLink="/home">
+                                <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+                            </a>
+                            <a class="mobile-options waves-effect waves-light">
+                                <i class="ti-more"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-left">
+                            <li>
+                                <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a>
+                                </div>
+                            </li>
+                            <li>
+                                <a onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                    <i class="ti-fullscreen"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+
+                            <li class="user-profile header-notification">
+                                <a class="waves-effect waves-light">
+                                    <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                    <span>{{this.nameUser}}</span>
+                                    <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="show-notification profile-notification">
+
+                                    <li class="waves-effect waves-light">
+                                        <a routerLink="/dash">
+                                            <i class="ti-user"></i> Profile
+                                        </a>
+                                    </li>
+
+                                    <li class="waves-effect waves-light">
+                                        <a href="#" (click)="logout()">
+                                            <i class="ti-layout-sidebar-left"></i> Logout
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="#" (click)="reload()">
+                                            <i class="ti-reload"></i> Relod Backend
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="#" (click)="clean()">
+                                            <i class="ti-layout-tab-v"></i> Delete All Result
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+
+                            <div class="pcoded-navigation-label"></div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="active">
+                                    <a routerLink="/home" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext">Home</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="pcoded-navigation-label">Patho Extract</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                    <a class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i><b>BC</b></span>
+                                        <span class="pcoded-mtext">Genomes references</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a routerLink="/indexh" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Hosts</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a routerLink="/indexp" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Pathogens</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                    <a class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-map-alt"></i><b>M</b></span>
+                                        <span class="pcoded-mtext">Samples analysis</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a routerLink="/reads" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Manage Samples</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        
+                                        <li class="">
+                                            <a routerLink="/qc" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Quality Control (QC)</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a routerLink="/db" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Filtrage digital (AD)</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a routerLink="/gcons" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Digital Filtering (DF)</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a routerLink="/pipeline" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Pipe Line</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <!--    <div class="pcoded-navigation-label">Statistics</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a routerLink="/stat" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-bar-chart-alt"></i><b>C</b></span>
+                                        <span class="pcoded-mtext">Export statistics</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="pcoded-navigation-label">Documentation</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a routerLink="/document" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-receipt"></i><b>B</b></span>
+                                        <span class="pcoded-mtext">PathoExtract</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>-->
+                        </div>
+                    </nav>
+                    <div class="pcoded-content">
+                        <!-- Page-header start -->
+                        <div class="page-header">
+                            <div class="page-block">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <div class="page-header-title">
+                                            <h5 class="m-b-10">Home</h5>
+                                            <p class="m-b-0">Welcome to Patho Extract</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a routerLink="/dash"> <i class="fa fa-home"></i> </a>
+                                            </li>
+                                            <li class="breadcrumb-item"><a routerLink="/dash">Home</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page-header end -->
+                        <div class="pcoded-inner-content">
+                            <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <!-- Page-body start -->
+                                    <div class="page-body">
+                                        <router-outlet>
+                               
+                                        </router-outlet>
+                                    </div>
+                                    <!-- Page-body end -->
+                                </div>
+                                <div id="styleSelector"> </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <footer
+                                class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                                <p class="col-md-4 mb-0 text-muted">&copy; 2022 Institut Pasteur de Côte d'Ivoire,
+                                   DREPAL PROJECT</p>
+                                <a routerLink="/home">
+                                    <img src="assets/images/logo_connect.png" alt="Theme-Logo" alt="Responsive image" />
+                                    <svg class="bi me-2" width="40" height="32">
+                                        <use xlink:href="#bootstrap" />
+                                    </svg>
+                                </a>
+
+
+                                <ul class="nav col-md-4 justify-content-end">
+                                    <li class="nav-item"><a target="_blank" href="https://www.pasteur.ci/"
+                                            class="nav-link px-2 text-muted">IPCI</a></li>
+                                                                    </ul>
+                            </footer>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

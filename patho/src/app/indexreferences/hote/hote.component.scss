@@ -1,0 +1,41 @@
+table {
+    width: 100%;
+}
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+#tbdata::after{
+    content: ""; /* Important, sinon l'élément n'est pas généré. */
+    display: table;
+    clear: both;
+}
+
+td,
+th {
+    width: 5%;
+}
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-family: serif;
+    font-size: 38px;
+    font-family: "Times New Roman";
+}
+
+.content {
+    margin: 100px;
+}
+
+.margin25 {
+    margin: 25px;
+}
+
+.upload {
+    cursor: pointer;
+}
+.example-tab-icon {
+    margin-right: 8px;
+}
