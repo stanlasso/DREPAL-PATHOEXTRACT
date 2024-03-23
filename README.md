@@ -1,16 +1,18 @@
+Voici le script corrigé avec le formatage Markdown approprié :
+
 ```markdown
 # Titre du projet
-DREPAL-PATHOEXTRACT
+**DREPAL-PATHOEXTRACT**
 
 ## Description du projet
 Un pipeline Snakemake intégré pour le contrôle qualité, la filtration, la double soustraction digitale, et la génération de fichiers consensus à partir de données de séquençage Sanger et NGS.
 
 ## Fonctionnalités principales
-- Gestion des isolats : Téléverser un ou plusieurs isolats et visualiser leurs qualités via FastQC et MultiQC
-- Contrôle qualité : Ajuster la qualité des isolats avec TrimGalore
-- Filtrage digital : Soustraction de l'hôte et extraction du pathogène d'intérêt
-- Pipeline : Exécution en un seul workflow du contrôle de qualité et du filtrage digital
-- Assemblage : Assemblage des lectures de qualité retenues
+- **Gestion des isolats** : Téléverser un ou plusieurs isolats et visualiser leurs qualités via FastQC et MultiQC
+- **Contrôle qualité** : Ajuster la qualité des isolats avec TrimGalore
+- **Filtrage digital** : Soustraction de l'hôte et extraction du pathogène d'intérêt
+- **Pipeline** : Exécution en un seul workflow du contrôle de qualité et du filtrage digital
+- **Assemblage** : Assemblage des lectures de qualité retenues
 
 ## Prérequis
 - Git
@@ -55,10 +57,10 @@ Un pipeline Snakemake intégré pour le contrôle qualité, la filtration, la do
 5. Créer un compte utilisateur
 
 ## Fonctionnalités générales
-- Filtres : Recherche de fichiers par nom, extension, date de modification, etc.
-- Suppression de fichiers
-- Suivi de l'état des processus
-- Téléchargement des journaux
+- **Filtres** : Recherche de fichiers par nom, extension, date de modification, etc.
+- **Suppression de fichiers**
+- **Suivi de l'état des processus**
+- **Téléchargement des journaux**
 
 ## Fonctionnalités spécifiques
 - **Génome de référence** : Indexation, vérification
@@ -89,4 +91,4 @@ MIT
 Stanlasso (GitHub/email)
 ```
 
-Cela devrait fournir un rendu correct dans un fichier README.md sur Git.
+Ce script est maintenant correctement formaté en Markdown pour un affichage approprié dans un fichier README.md sur Git.
