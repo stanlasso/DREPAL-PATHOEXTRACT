@@ -1,5 +1,3 @@
-Voici le script corrigé avec le formatage Markdown approprié :
-
 ```markdown
 # Titre du projet
 **DREPAL-PATHOEXTRACT**
