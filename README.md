@@ -1,5 +1,3 @@
-Je m'excuse pour le désagrément. Voici le script corrigé pour un affichage correct dans un fichier README.md :
-
 ```markdown
 # Titre du projet
 DREPAL-PATHOEXTRACT
