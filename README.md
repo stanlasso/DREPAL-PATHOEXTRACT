@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-```markdown
-# Titre du projet
-**DREPAL-PATHOEXTRACT**
-=======
 # DREPAL-PATHOEXTRACT
->>>>>>> e626a90 (readme.md 5)
 
 Un pipeline Snakemake intégré pour le contrôle qualité, la filtration, la double soustraction digitale, et la génération de fichiers consensus à partir de données de séquençage Sanger et NGS.
 
 ## Fonctionnalités principales
-- **Gestion des isolats** : Téléverser un ou plusieurs isolats et visualiser leurs qualités via FastQC et MultiQC
-- **Contrôle qualité** : Ajuster la qualité des isolats avec TrimGalore
-- **Filtrage digital** : Soustraction de l'hôte et extraction du pathogène d'intérêt
-- **Pipeline** : Exécution en un seul workflow du contrôle de qualité et du filtrage digital
-- **Assemblage** : Assemblage des lectures de qualité retenues
+- Gestion des isolats : Téléverser un ou plusieurs isolats et visualiser leurs qualités via FastQC et MultiQC
+- Contrôle qualité : Ajuster la qualité des isolats avec TrimGalore
+- Filtrage digital : Soustraction de l'hôte et extraction du pathogène d'intérêt
+- Pipeline : Exécution en un seul workflow du contrôle de qualité et du filtrage digital
+- Assemblage : Assemblage des lectures de qualité retenues
 
 ## Prérequis
 - Git
@@ -58,17 +52,10 @@ npm install
 Créer un compte utilisateur
 
 ## Fonctionnalités générales
-<<<<<<< HEAD
-- **Filtres** : Recherche de fichiers par nom, extension, date de modification, etc.
-- **Suppression de fichiers**
-- **Suivi de l'état des processus**
-- **Téléchargement des journaux**
-=======
 - Filtres: recherche de fichiers par nom, extension, date de modification, etc.
 - Suppression de fichiers
 - Suivi de l'état des processus
 - Téléchargement des journaux
->>>>>>> e626a90 (readme.md 5)
 
 ## Fonctionnalités spécifiques
 - **Génome de référence**: indexation, vérification
@@ -97,7 +84,3 @@ MIT
 
 ## Contact
 Stanlasso (GitHub/email)
-<<<<<<< HEAD
-```
-=======
->>>>>>> e626a90 (readme.md 5)
