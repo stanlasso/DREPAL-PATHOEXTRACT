@@ -88,5 +88,3 @@ MIT
 ## Contact
 Stanlasso (GitHub/email)
 ```
-
-Ce script est maintenant correctement formaté en Markdown pour un affichage approprié dans un fichier README.md sur Git.
