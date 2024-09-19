@@ -170,7 +170,7 @@ And there you have it; you are now ready to begin processing your data!
 ## Contributors 
 •	Aristide Béranger AKO
 
-•	Christian Paul AKO
+• [Christian Paul AKO](https://www.linkedin.com/in/paul-christian-ako-78636b122/)
 
 •	Jérôme Kablan ADOU
 
