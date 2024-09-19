@@ -162,13 +162,18 @@ And there you have it; you are now ready to begin processing your data!
 
 ## Author
 •	ASSOHOUN Egomli Stanislas
+
 •	Mail: stanlasso@gmail.com
+
 •	Linkedin: https://www.linkedin.com/in/stanislas-assohoun-2b973bab/
 
 ## Contributors 
 •	Aristide Béranger AKO
+
 •	Christian Paul AKO
+
 •	Jérôme Kablan ADOU
+
 •	Ronan JAMBOU
 
 ## Licence
