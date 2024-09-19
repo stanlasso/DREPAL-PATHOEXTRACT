@@ -1,85 +1,74 @@
 
 
 # DREPAL-PATHOEXTRACT
-DREPAL-PATHOEXTRACT est un pipeline Snakemake intégré conçu pour le contrôle qualité, la filtration, la double soustraction digitale, et la génération de fichiers consensus à partir de données de séquençage Sanger et NGS. Le but de DREPAL-PATHOEXTRACT est d'optimiser l'analyse de vos données de séquençage, vous permettant ainsi de vous concentrer sur les aspects les plus intéressants de vos recherches.
+DREPAL-PATHOEXTRACT is an open-source bioinformatics application designed for (i) quality control of NGS data, (ii) removal of contamination from the host and other microorganisms, and (iii) de novo assembly of reads corresponding to a pathogen of interest, specifically P. falciparum. This application is tailored for Illumina sequencing data obtained from patient samples positive for malaria caused by P. falciparum.
+DREPAL-PATHOEXTRACT leverages Snakemake to orchestrate various workflows, enabling deployment in diverse environments, whether local or cloud-based. Additionally, the application relies exclusively on software packages available through Bioconda and Conda-Forge, ensuring a simplified installation process that is accessible to a wide range of users.
 
-DREPAL-PATHOEXTRACT est une application full web (client-serveur) qui peut être installée sur une machine locale ou utilisée dans un environnement réseau. Elle se divise en deux parties principales : le pipeline d'analyse et les outils d'extraction.
-
-Le pipeline d'analyse est le cœur de DREPAL-PATHOEXTRACT. Construit avec Snakemake, il permet de gérer le contrôle qualité et le filtrage digital en une seule exécution, du téléversement des isolats à la génération des fichiers consensus. Grâce à des outils comme FastQC, MultiQC, et TrimGalore, il garantit une analyse complète et précise des données de séquençage.
-
-![DREPAL-PATHOEXTRACT pipeline](data/DREPAL-PATHOEXTRACT-logo.png)
-
-Les outils d'extraction sont des flux de travail indépendants conçus pour faciliter l'analyse comparative, qu'il s'agisse d'assembler les lectures retenues, de traiter des isolats provenant de diverses plateformes NGS, ou d'intégrer des données de séquençage Sanger et NGS. Avec une structure d'entrée et de sortie uniformisée, DREPAL-PATHOEXTRACT permet d'analyser des centaines à des milliers d'échantillons/patients en une seule exécution, tout en assurant une flexibilité maximale.
-
-DREPAL-PATHOEXTRACT a été développé avec l'idée de fournir un outil performant et accessible, optimisé pour une utilisation sur les systèmes Linux (Ubuntu). En intégrant ce que nous avons appris de précédentes expériences, nous avons conçu DREPAL-PATHOEXTRACT pour être rapide, portable, et facile à utiliser, quel que soit le volume de données à traiter.
 
 # Documentation
-La documentation complète de DREPAL-PATHOEXTRACT, incluant un guide pratique et une présentation détaillée de l'application, est accessible en ligne. Vous y trouverez des instructions sur la configuration, l'utilisation du pipeline, ainsi que des exemples concrets pour maximiser l'efficacité de vos analyses. Pour consulter le manuel, veuillez visiter le lien suivant : [DREPAL-PATHOEXTRACT manual](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+The complete documentation for DREPAL-PATHOEXTRACT, including a practical guide and a detailed description of the application, is available online. It provides instructions on configuration, pipeline usage, and concrete examples to help optimize analysis efficiency. To access the manual, please visit the following link: DREPAL-PATHOEXTRACT Manual.
 
-Nous vous recommandons vivement de consulter cette ressource pour une compréhension approfondie de DREPAL-PATHOEXTRACT et de ses fonctionnalités.
+# Installation of DREPAL-PATHOEXTRACT
+DREPAL-PATHOEXTRACT is designed for easy installation and configuration through the use of Conda, an open-source package and environment management system compatible with Windows, macOS, and Linux. The application is hosted on GitHub and can be installed locally or deployed in a cloud environment.
 
-# Installation de DREPAL-PATHOEXTRACT
-DREPAL-PATHOEXTRACT est conçu pour être facilement installé et configuré grâce à l'utilisation de Conda, un système de gestion de paquets et d'environnements open source fonctionnant sous Windows, macOS et Linux. L'application est disponible sur GitHub et peut être installée sur une machine locale ou utilisée dans un environnement réseau.
+## Downloading and Cloning the Source Code
+To begin, download the source code for DREPAL-PATHOEXTRACT from GitHub by following the steps below:
+1.	Ensure that Git is installed on your system. If not, you can download and install it from the official Git website.
+2.	Open a command prompt or terminal on your system.
+3.	Navigate to the directory where you would like to clone the project.
+4.	Clone the project from GitHub by executing the following command:
 
-## Téléchargement et Clonage du Code Source
-Pour commencer, téléchargez le code source de DREPAL-PATHOEXTRACT depuis GitHub en suivant les étapes ci-dessous :
-
-1-Assurez-vous que Git est installé sur votre système. Si ce n'est pas le cas, téléchargez et installez Git à partir du site officiel de Git.
-2-Ouvrez une invite de commande ou un terminal sur votre système.
-3-Accédez au répertoire dans lequel vous souhaitez cloner le projet.
-4-Clonez le projet à partir de GitHub en utilisant la commande suivante :
 
 ```
 # sh
 git clone https://github.com/stanlasso/DREPAL-PATHOEXTRACT.git
 ```
 
-5-Une fois le clonage terminé, accédez au répertoire DREPAL-PATHOEXTRACT 
+5-Once the cloning process is complete, navigate to the DREPAL-PATHOEXTRACT directory
 
 ```
 # sh
 conda activate DREPAL-PATHOEXTRACT
 ```
 
-## Installation de Conda et Snakemake
-DREPAL-PATHOEXTRACT dépend de plusieurs outils et bibliothèques. Pour gérer ces dépendances, nous utilisons Conda. Suivez ces étapes pour installer Conda et Snakemake :
+## Installation of Conda and Snakemake
 
 ### 1. Installation de Conda :
 
-- Téléchargez le script d'installation de Miniconda :
+# 1.	Installation of Conda
+- Download the Miniconda installation script : 
 
 ```
 # sh
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
-
-- Exécutez le script d'installation de Miniconda :
+- Run the Miniconda installation script :
 
 ```
 # sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
-- Suivez les instructions à l'écran pour finaliser l'installation. N'oubliez pas de fermer et de rouvrir votre terminal après l'installation.
+- Follow the on-screen instructions to complete the installation process. It is recommended to close and reopen your terminal after the installation.
 
-### 2.Installation de Snakemake :
+### 2.Installation of Snakemake :
 
-- Installez Mamba pour une installation rapide des paquets :
+- Install the Mamba package manager :
 
 ```
 # sh
 conda install -n base -c conda-forge mamba
 ```
 
-- Créez un environnement conda et installez la version minimale de Snakemake :
+- Create a Conda environment and install the minimal version of Snakemake :
 
 ```
 # sh
 mamba create -c bioconda -c conda-forge -n snakemake snakemake-minimal
 ```
 
-- Activez l'environnement Snakemake :
+- Activate the Snakemake environment :
 
 ```
 # sh
@@ -87,99 +76,100 @@ conda activate snakemake
 ```
 
 ## Installation de PM2 et du Serveur Apache
-Pour gérer et déployer le backend de DREPAL-PATHOEXTRACT, nous utilisons PM2 et Apache. Voici comment les installer :
+To manage and deploy the backend of DREPAL-PATHOEXTRACT, we use PM2 and Apache tools. The instructions below outline the installation process for these components:
 
-### 1. Installation de PM2 :
+### 1. Installation of PM2 :
 
--  Mettez à jour les paquets existants :
+-  Update existing packages :
 ```
 # sh
 sudo apt update
 ```
 
-- Installez Node.js :
+- Install Node.js :
 
 ```
 # sh
 sudo apt install nodejs
 ```
 
-- Installez npm (si nécessaire) :
+- Install npm (if necessary):
 ```
 # sh
 sudo apt install npm
 ```
-- Installez PM2 globalement :
+- Install PM2 globally :
 ```
 # sh
 sudo npm install pm2 -g
 ```
-### 2. Installation du Serveur Apache :
+### 2. Installation of the Apache Server :
 
-- Mettez à jour les paquets existants :
+- Update existing packages :
 
 ```
 # sh
 sudo apt update
 ```
 
-- Installez le serveur Apache :
+- install Apache server :
 
 ```
 # sh
 sudo apt install apache2
 ```
 
-- Vérifiez que le serveur Apache est en cours d'exécution :
+- Verify that the Apache server is running :
 ```
 # sh
 sudo systemctl status apache2
 ```
 
-- Si Apache n'est pas en cours d'exécution, démarrez-le :
+- 	If Apache is not running, start it :
 ```
 # sh
 sudo service apache2 start
 ```
 
-## Configuration de l'Application
+## Application Configuration
 
-### 1. Déploiement du Frontend :
+### 1. Frontend Deployment :
 
-- Copiez le contenu du dossier frontend dans le répertoire web d'Apache :
+- Copy the contents of the frontend folder into the Apache web directory :
 ```
 # sh
 sudo cp -r patho /var/www/html/
 ```
 
-- Accédez à l'application via votre navigateur en entrant l'URL `localhost/patho`.
-### 2. Installation des Dépendances du Backend :
+- Access the application through your browser by entering the URL `localhost/patho`.
+### 2.	Backend Dependencies Installation :
 
-- Accédez au répertoire `toolskit` et installez les dépendances :
+- Navigate to the toolskit directory and install the dependencies :
 ```
 # sh
 cd toolskit
 npm install
 ```
 
-- Démarrez le backend avec PM2 :
+- Start the backend using PM2 :
 ```
 # sh
 pm2 start server.js
 ```
 
-And voilà, you are all set to get started processing your data!
+And there you have it; you are now ready to begin processing your data!
 
 
-## Auteur
-- ASSOHOUN Egomli Stanislas
-- Mail: stanlasso@gmail.com
-- Linkedin: https://www.linkedin.com/in/stanislas-assohoun-2b973bab/
+## Author
+•	ASSOHOUN Egomli Stanislas
+•	Mail: stanlasso@gmail.com
+•	Linkedin: https://www.linkedin.com/in/stanislas-assohoun-2b973bab/
 
-## Contributeurs
-- Christian Paul AKO
-- Christian-Renaud SERY
-- Ronan JAMBOU
+## Contributors 
+•	Aristide Béranger AKO
+•	Christian Paul AKO
+•	Jérôme Kablan ADOU
+•	Ronan JAMBOU
 
 ## Licence
 MIT
