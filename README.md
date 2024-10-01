@@ -174,7 +174,7 @@ And there you have it; you are now ready to begin processing your data!
 
 • <a href="https://www.linkedin.com/in/paul-christian-ako-78636b122/" target="_blank">Abouchou Paul Christian AKO</a>
 
-•	Jérôme Kablan ADOU
+•	Medar Brou KOUASSI
 
 •	Jérôme Adou KABLAN
 
